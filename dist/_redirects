@@ -1,0 +1,10 @@
+# Canonical www to apex redirect
+https://www.noin.in/* https://noin.in/:splat 301!
+
+# Clean URLs
+/privacy /privacy.html 200
+/terms /terms.html 200
+/support /support.html 200
+/demo /preview.html 200
+/preview /preview.html 200
+/app /preview.html 200

@@ -1,0 +1,27 @@
+{
+  "name": "Noin",
+  "project_title": "Vehicle Maintenance App - Noin",
+  "tagline": "The Private, Zero-Telemetry Vehicle Maintenance Ledger",
+  "domain": "noin.in",
+  "avoid": [
+    "Drivvo",
+    "Simply Auto",
+    "Fuelly",
+    "aCar",
+    "Carfax",
+    "Carfax Car Care"
+  ],
+  "domains": [
+    "drivvo.com",
+    "simplyauto.app",
+    "fuelly.com",
+    "carfax.com"
+  ],
+  "colors": [
+    "#0066cc",
+    "#0099ff",
+    "#2563eb",
+    "#1d4ed8"
+  ],
+  "logo": "assets/noin_logo.png"
+}

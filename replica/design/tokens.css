@@ -1,0 +1,64 @@
+/* Noin Design System Tokens — Daylight Theme (Clean, High-Legibility) */
+/* Project: Vehicle Maintenance App - Noin (noin.in) */
+
+:root {
+  /* Surface & Background (Daylight Theme) */
+  --tk-color-bg: #F8FAFC;
+  --tk-color-surface: #FFFFFF;
+  --tk-color-surface-card: #FFFFFF;
+  --tk-color-surface-elevated: #F1F5F9;
+  --tk-color-border: #E2E8F0;
+  --tk-color-border-input: #64748B;
+
+  /* Typography */
+  --tk-color-text: #0F172A;
+  --tk-color-text-muted: #475569;
+
+  /* Action & Status Accents */
+  --tk-color-accent: #0F172A;
+  --tk-color-on-accent: #FFFFFF;
+  --tk-color-danger: #DC2626;
+  --tk-color-on-danger: #FFFFFF;
+  --tk-color-success: #059669;
+  --tk-color-on-success: #FFFFFF;
+  --tk-color-badge-neutral: #E2E8F0;
+
+  /* Type Scale */
+  --tk-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --tk-font-mono: 'JetBrains Mono', 'Roboto Mono', monospace;
+
+  --tk-type-caption-size: 12px;
+  --tk-type-caption-line: 16px;
+  --tk-type-body-sm-size: 14px;
+  --tk-type-body-sm-line: 20px;
+  --tk-type-body-size: 16px;
+  --tk-type-body-line: 24px;
+  --tk-type-subhead-size: 18px;
+  --tk-type-subhead-line: 24px;
+  --tk-type-title-size: 22px;
+  --tk-type-title-line: 28px;
+  --tk-type-odometer-size: 32px;
+  --tk-type-odometer-line: 36px;
+
+  /* Spacing Scale (4dp Grid) */
+  --tk-space-1: 4px;
+  --tk-space-2: 8px;
+  --tk-space-3: 12px;
+  --tk-space-4: 16px;
+  --tk-space-5: 20px;
+  --tk-space-6: 24px;
+  --tk-space-8: 32px;
+  --tk-space-12: 48px;
+
+  /* Radius */
+  --tk-radius-sm: 6px;
+  --tk-radius-md: 10px;
+  --tk-radius-card: 16px;
+  --tk-radius-lg: 14px;
+  --tk-radius-pill: 9999px;
+
+  /* Elevation Shadows */
+  --tk-elevation-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --tk-elevation-modal: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --tk-elevation-fab: 0 4px 12px rgba(15, 23, 42, 0.25);
+}

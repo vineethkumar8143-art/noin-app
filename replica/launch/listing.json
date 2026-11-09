@@ -1,0 +1,15 @@
+{
+  "avoid": [
+    "Drivvo",
+    "Simply Auto",
+    "Fuelly",
+    "aCar",
+    "Carfax",
+    "Carfax Car Care"
+  ],
+  "google_play": {
+    "title": "Vehicle Maintenance App - Noin",
+    "short_description": "Offline vehicle maintenance logbook, service reminders, and resale PDF dossier.",
+    "full_description": "Noin is a local-first vehicle maintenance logbook and service record tracker built for drivers, DIY mechanics, and car enthusiasts who want full data ownership without subscriptions.\n\nEverything is stored locally on your phone in an offline database. No mandatory accounts, no cloud dependency, and no intrusive ads.\n\nKEY FEATURES:\n\n\u2022 FAST ONE-TAP LOGGING\nQuickly record oil changes, tire rotations, brake jobs, battery replacements, and repairs with dedicated service tiles.\n\n\u2022 BUYER-READY RESALE DOSSIER\nExport a clean, professional PDF service dossier at the tap of a button. Shows complete chronological service dates, mileage milestones, parts used, and total investment to prove vehicle care and maximize resale value.\n\n\u2022 FLEXIBLE VEHICLE PROFILES & CUSTOM PHOTOS\nTrack any car, truck, classic pre-1981 vehicle, motorcycle, or trailer without forced 17-character VIN restrictions. Upload your own car photos for each bay.\n\n\u2022 SMART MAINTENANCE REMINDERS\nSet calendar or mileage-based intervals (e.g. 5,000 miles or 6 months). Receive proactive on-device notifications when scheduled service is due.\n\n\u2022 100% OFFLINE AND PRIVATE\nZero cloud trackers, zero location spying, and zero third-party ads. Your garage records remain on your device.\n\n\u2022 UNLOCKED CSV EXPORT\nExport your complete service history to CSV or JSON anytime. Never get locked out of your own data.\n\nFree for your primary vehicle. Optional lifetime unlock available for multi-vehicle garages."
+  }
+}

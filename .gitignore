@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Android / Gradle build files
+.gradle/
+build/
+android/.gradle/
+android/build/
+android/app/build/
+local.properties
+*.hprof
+
+# Keystores
+*.jks
+*.keystore
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log

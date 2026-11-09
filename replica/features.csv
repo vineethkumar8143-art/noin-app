@@ -1,0 +1,12 @@
+feature,area,priority,original,clone,notes
+vehicle_profiles,Garage,must,yes,yes,"Full garage bay management with classic car (no VIN) support"
+service_logging,Logging,must,yes,yes,"Quick 1-tap service tiles with cost and parts tracking"
+odometer_tracking,Garage,must,yes,yes,"On-device mileage ledger with rollback prevention"
+maintenance_reminders,Reminders,must,yes,yes,"Mileage and date-based scheduled alerts"
+fuel_expense_tracking,Logging,should,yes,yes,"Cost per mile/km and fuel log tracking with automated MPG efficiency calculation"
+tire_tread_tracking,Logging,should,no,yes,"4-point tire tread depth gauge (FL, FR, RL, RR) with wear warning alerts"
+bay_customization,Garage,should,no,yes,"Custom vehicle nicknames, license plates, unit switches, and single-bay exports"
+resale_pdf_dossier,Dossier,must,no,yes,"Instant buyer-ready PDF maintenance ledger generated on-device"
+instant_data_export,Settings,must,no,yes,"Unrestricted JSON/CSV export without cloud paywalls"
+privacy_guarantee,Privacy,must,no,yes,"Zero telemetry SDKs, 100% offline Room SQLite storage"
+transparent_pricing,Store,should,no,yes,"$19.99 lifetime unlock or $2.99/mo with generous 1-car free tier"

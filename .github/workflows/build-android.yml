@@ -1,0 +1,78 @@
+name: Build Noin Android Release
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Android App Bundle (.aab) & APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Generate / Configure Release Keystore
+        id: setup_keystore
+        run: |
+          cd android
+          if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
+            echo "Using repository secret keystore..."
+            echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > noin-release.jks
+            echo "storeFile=noin-release.jks" > keystore.properties
+            echo "storePassword=${{ secrets.KEYSTORE_PASSWORD }}" >> keystore.properties
+            echo "keyAlias=${{ secrets.KEY_ALIAS || 'noin' }}" >> keystore.properties
+            echo "keyPassword=${{ secrets.KEY_PASSWORD || secrets.KEYSTORE_PASSWORD }}" >> keystore.properties
+          else
+            echo "Generating production release keystore..."
+            keytool -genkeypair -v -keystore noin-release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias noin \
+              -dname "CN=Noin, OU=Mobile, O=Noin, L=Bengaluru, ST=Karnataka, C=IN" \
+              -storepass "noin_secure_release_2026" \
+              -keypass "noin_secure_release_2026"
+            echo "storeFile=noin-release.jks" > keystore.properties
+            echo "storePassword=noin_secure_release_2026" >> keystore.properties
+            echo "keyAlias=noin" >> keystore.properties
+            echo "keyPassword=noin_secure_release_2026" >> keystore.properties
+          fi
+
+      - name: Build Android App Bundle (.aab) for Google Play
+        run: |
+          cd android
+          chmod +x gradlew 2>/dev/null || true
+          if [ -f "./gradlew" ]; then
+            ./gradlew :app:bundleRelease :app:assembleRelease --stacktrace
+          else
+            gradle :app:bundleRelease :app:assembleRelease --stacktrace
+          fi
+
+      - name: Upload Google Play App Bundle (.aab)
+        uses: actions/upload-artifact@v4
+        with:
+          name: noin-release-aab
+          path: android/app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+
+      - name: Upload Universal Direct Install APK (.apk)
+        uses: actions/upload-artifact@v4
+        with:
+          name: noin-direct-install-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
+          if-no-files-found: warn
+
+      - name: Backup Release Keystore (Keep Safe)
+        uses: actions/upload-artifact@v4
+        with:
+          name: noin-signing-keystore
+          path: android/noin-release.jks
+          if-no-files-found: warn
