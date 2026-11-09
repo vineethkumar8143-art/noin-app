@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "in.noin.vehiclemaintenance"
+    namespace = "noin.vehiclemaintenance"
     compileSdk = 35
 
     defaultConfig {
@@ -33,7 +33,8 @@ android {
         create("release") {
             if (hasKeystore) {
                 val sFile = keystoreProperties.getProperty("storeFile") ?: "noin-release.jks"
-                storeFile = if (file(sFile).isAbsolute) file(sFile) else rootProject.file(sFile)
+                val resolved = if (file(sFile).isAbsolute) file(sFile) else if (file(sFile).exists()) file(sFile) else rootProject.file(sFile)
+                storeFile = resolved
                 storePassword = keystoreProperties.getProperty("storePassword")
                 keyAlias = keystoreProperties.getProperty("keyAlias")
                 keyPassword = keystoreProperties.getProperty("keyPassword")

@@ -45,6 +45,8 @@ jobs:
             echo "keyAlias=noin" >> keystore.properties
             echo "keyPassword=noin_secure_release_2026" >> keystore.properties
           fi
+          cp noin-release.jks app/noin-release.jks
+          cp keystore.properties app/keystore.properties
 
       - name: Build Android App Bundle (.aab) for Google Play
         run: |

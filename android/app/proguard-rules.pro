@@ -5,7 +5,7 @@
 -dontwarn androidx.room.paging.**
 
 # Keep Data Models for Room SQLite Reflection
--keep class in.noin.vehiclemaintenance.data.model.** { *; }
+-keep class noin.vehiclemaintenance.data.model.** { *; }
 -keepclassmembers class in.noin.vehiclemaintenance.data.model.** { *; }
 
 # Kotlin Coroutines
