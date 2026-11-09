@@ -27,7 +27,13 @@ jobs:
         id: setup_keystore
         run: |
           cd android
-          if [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
+          if [ -f "noin-release.jks" ]; then
+            echo "Using permanent repository release keystore..."
+            echo "storeFile=noin-release.jks" > keystore.properties
+            echo "storePassword=noin_secure_release_2026" >> keystore.properties
+            echo "keyAlias=noin" >> keystore.properties
+            echo "keyPassword=noin_secure_release_2026" >> keystore.properties
+          elif [ -n "${{ secrets.KEYSTORE_BASE64 }}" ]; then
             echo "Using repository secret keystore..."
             echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > noin-release.jks
             echo "storeFile=noin-release.jks" > keystore.properties

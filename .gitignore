@@ -13,8 +13,6 @@ local.properties
 *.hprof
 
 # Keystores
-*.jks
-*.keystore
 
 # OS generated files
 Thumbs.db
