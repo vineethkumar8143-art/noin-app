@@ -26,3 +26,7 @@ $RECYCLE.BIN/
 # Temporary files
 *.tmp
 *.log
+
+# Release Binaries
+*.aab
+*.apk
