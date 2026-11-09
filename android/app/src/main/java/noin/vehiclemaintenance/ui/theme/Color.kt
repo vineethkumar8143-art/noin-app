@@ -4,6 +4,7 @@ import androidx.compose.ui.graphics.Color
 
 // Daylight Clean Minimalist Palette from tokens.json
 val TkBg = Color(0xFFF8FAFC)
+val TkBackground = TkBg
 val TkSurface = Color(0xFFFFFFFF)
 val TkSurfaceCard = Color(0xFFFFFFFF)
 val TkSurfaceElevated = Color(0xFFF1F5F9)
